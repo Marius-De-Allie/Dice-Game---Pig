@@ -8,3 +8,7 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
+
+// Global Variables
+// Array to hold both player's scores during game.
+let scores = [0, 0];
