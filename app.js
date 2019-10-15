@@ -35,7 +35,8 @@ const player2ScoreEl = document.querySelector('#score-1');
 diceRollEl.addEventListener('click', function() {
   diceRoll = Math.floor(Math.random() * 6) + 1; // generate rand. # between 1 and 6.
   if(diceRoll !== 1) { // Check if dice roll value is not equal to 1.
-
+    diceEl.setAttribute('src', `dice-${diceRoll}.png`); // set src attribute on dice img element to image matching currently select dice.
+    console.log('value other than 1 rolled.');
   }
   console.log('dice rolled!');
 });
