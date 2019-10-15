@@ -25,6 +25,8 @@ const diceRollEl = document.querySelector('.btn-roll');
 const holdButtonEl = document.querySelector('.btn-hold');
 // Select new game button element node from DOM and save to variable.
 const newButtonEl = document.querySelector('.btn-new');
+// Select dice element node from DOM and save to variable.
+const diceEl = document.querySelector('.dice');
 
 const player1ScoreEl = document.querySelector('#score-0');
 const player2ScoreEl = document.querySelector('#score-1');
