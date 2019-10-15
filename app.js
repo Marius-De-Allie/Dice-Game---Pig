@@ -30,3 +30,8 @@ const diceEl = document.querySelector('.dice');
 
 const player1ScoreEl = document.querySelector('#score-0');
 const player2ScoreEl = document.querySelector('#score-1');
+
+/*** DICE ROLL EL CLICK EVENT HANDLER ***/
+diceRollEl.addEventListener('click', function() {
+  console.log('dice rolled!');
+});
