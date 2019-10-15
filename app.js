@@ -20,3 +20,5 @@ let activePlayer = 0;
 let diceRoll = Math.floor(Math.random() * 6) + 1;
 
 const diceRollEl = document.querySelector('.btn-roll');
+const player1ScoreEl = document.querySelector('#score-0');
+const player2ScoreEl = document.querySelector('#score-1');
