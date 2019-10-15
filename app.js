@@ -12,3 +12,5 @@ GAME RULES:
 // Global Variables
 // Array to hold both player's scores during game.
 let scores = [0, 0];
+// Variable to hold currently active player's current score for the current round.
+let roundScore = 0;
