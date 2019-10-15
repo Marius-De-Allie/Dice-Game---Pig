@@ -19,6 +19,10 @@ let activePlayer = 0;
 // Variable to hold the value of random number between 1 and 6 (simulating  a dice roll).
 let diceRoll = Math.floor(Math.random() * 6) + 1;
 
+// Select dice roll button element node from DOM and save to variable
 const diceRollEl = document.querySelector('.btn-roll');
+// Select hold button element node from DOM and save to variable
+const holdButtonEl = document.querySelector('.btn-hold');
+
 const player1ScoreEl = document.querySelector('#score-0');
 const player2ScoreEl = document.querySelector('#score-1');
