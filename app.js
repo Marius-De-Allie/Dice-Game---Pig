@@ -34,5 +34,8 @@ const player2ScoreEl = document.querySelector('#score-1');
 /*** DICE ROLL EL CLICK EVENT HANDLER ***/
 diceRollEl.addEventListener('click', function() {
   diceRoll = Math.floor(Math.random() * 6) + 1; // generate rand. # between 1 and 6.
+  if(diceRoll !== 1) { // Check if dice roll value is not equal to 1.
+
+  }
   console.log('dice rolled!');
 });
