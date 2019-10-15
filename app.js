@@ -16,3 +16,5 @@ let scores = [0, 0];
 let roundScore = 0;
 // Variable to hold currently active player.
 let activePlayer = 0;
+// Variable to hold the value of random number between 1 and 6 (simulating  a dice roll).
+let diceRoll = Math.floor(Math.random() * 6) + 1;
