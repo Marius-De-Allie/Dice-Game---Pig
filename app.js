@@ -37,6 +37,8 @@ diceRollEl.addEventListener('click', function() {
   if(diceRoll !== 1) { // Check if dice roll value is not equal to 1.
     diceEl.setAttribute('src', `dice-${diceRoll}.png`); // set src attribute on dice img element to image matching currently select dice.
     roundScore += diceRoll; // Add current diceRoll value to the roucScore variable.
+    // Update active player current score DOM element node textContent value to current roundScore value.
+    document.querySelector(`#current-${activePlayer}`).textContent = roundScore;
     console.log(`round score: ${roundScore}`);
     console.log('value other than 1 rolled.');
   }
