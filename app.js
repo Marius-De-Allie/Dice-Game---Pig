@@ -34,9 +34,9 @@ const player2ScoreEl = document.querySelector('#score-1');
 /*** DICE ROLL EL CLICK EVENT HANDLER ***/
 diceRollEl.addEventListener('click', function() {
   diceRoll = Math.floor(Math.random() * 6) + 1; // generate rand. # between 1 and 6.
+  diceEl.setAttribute('src', `dice-${diceRoll}.png`); // set src attribute on dice img element to image matching currently selected dice.
   if(diceRoll !== 1) { // Check if dice roll value is not equal to 1.
-    diceEl.setAttribute('src', `dice-${diceRoll}.png`); // set src attribute on dice img element to image matching currently select dice.
-    roundScore += diceRoll; // Add current diceRoll value to the roucScore variable.
+    roundScore += diceRoll; // Add current diceRoll value to the roundScore variable.
     // Update active player current score DOM element node textContent value to current roundScore value.
     document.querySelector(`#current-${activePlayer}`).textContent = roundScore;
     console.log(`round score: ${roundScore}`);
