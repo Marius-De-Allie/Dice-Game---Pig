@@ -45,6 +45,9 @@ diceRollEl.addEventListener('click', function() {
   }
   else { // If current diceRoll value is = 1.
     roundScore = 0;
+    for(let currentScore of currentScores) {
+      currentScore.textContent = roundScore;
+    }
   }
   console.log('dice rolled!');
 });
