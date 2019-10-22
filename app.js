@@ -42,5 +42,8 @@ diceRollEl.addEventListener('click', function() {
     console.log(`round score: ${roundScore}`);
     console.log('value other than 1 rolled.');
   }
+  else { // If current diceRoll value is = 1.
+
+  }
   console.log('dice rolled!');
 });
