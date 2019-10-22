@@ -61,4 +61,6 @@ diceRollEl.addEventListener('click', function() {
 holdButtonEl.addEventListener('click',function() {
   // 1. Add current score to active player's global game score.
   scores[activePlayer] += roundScore;
+  // 2. Update textContent value of active player's score panel.
+  document.querySelector(`#score-${activePlayer}`).textContent = scores[activePlayer];
 });
