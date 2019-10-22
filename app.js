@@ -48,6 +48,8 @@ diceRollEl.addEventListener('click', function() {
     for(let currentScore of currentScores) {
       currentScore.textContent = roundScore;
     }
+    // update activePlayer value (if 0 set to 1, if 1 set to 0).
+    activePlayer === 0? activePlayer = 1: activePlayer = 0;
   }
   console.log('dice rolled!');
 });
