@@ -50,6 +50,9 @@ diceRollEl.addEventListener('click', function() {
     }
     // update activePlayer value (if 0 set to 1, if 1 set to 0).
     activePlayer === 0? activePlayer = 1: activePlayer = 0;
+    // Toggle active class on both player's panel DOM element nodes.
+    document.querySelector('.player-0-panel').classList.toggle('active'); 
+    document.querySelector('.player-1-panel').classList.toggle('active');
   }
   console.log('dice rolled!');
 });
