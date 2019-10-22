@@ -27,7 +27,8 @@ const holdButtonEl = document.querySelector('.btn-hold');
 const newButtonEl = document.querySelector('.btn-new');
 // Select dice element node from DOM and save to variable.
 const diceEl = document.querySelector('.dice');
-
+// Select players current score element nodes from DOM and save to variable.
+const currentScores = document.querySelectorAll('.player-current-score');
 const player1ScoreEl = document.querySelector('#score-0');
 const player2ScoreEl = document.querySelector('#score-1');
 
@@ -43,7 +44,7 @@ diceRollEl.addEventListener('click', function() {
     console.log('value other than 1 rolled.');
   }
   else { // If current diceRoll value is = 1.
-    roundScore = 0; 
+    roundScore = 0;
   }
   console.log('dice rolled!');
 });
