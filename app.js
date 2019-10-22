@@ -59,5 +59,6 @@ diceRollEl.addEventListener('click', function() {
 
 /*** HOLD BUTTON EL CLICK EVENT HANDLER ***/
 holdButtonEl.addEventListener('click',function() {
-
+  // 1. Add current score to active player's global game score.
+  scores[activePlayer] += roundScore;
 });
