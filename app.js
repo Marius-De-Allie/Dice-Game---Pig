@@ -70,5 +70,7 @@ holdButtonEl.addEventListener('click',function() {
     console.log('You won!');
     // Select active player's 'playername' DOM element node and update text content to 'Winner!'.
     document.querySelector(`#name-${activePlayer}`).textContent = 'Winner!';
+    //  Remove active class from currently active player's panel (winner).
+    document.querySelector(`.player-${activePlayer}-panel`).classList.remove('active');
   }
 });
