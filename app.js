@@ -65,4 +65,8 @@ holdButtonEl.addEventListener('click',function() {
   scores[activePlayer] += roundScore;
   // 2. Update textContent value of active player's score panel.
   document.querySelector(`#score-${activePlayer}`).textContent = scores[activePlayer];
+  // 3. Check whether active player's score is >= winningScore.
+  if(scores[activePlayer] >= winningScore) {
+    console.log('You won!');
+  }
 });
