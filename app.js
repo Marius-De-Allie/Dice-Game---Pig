@@ -68,5 +68,7 @@ holdButtonEl.addEventListener('click',function() {
   // 3. Check whether active player's score is >= winningScore.
   if(scores[activePlayer] >= winningScore) {
     console.log('You won!');
+    // Select active player's 'playername' DOM element node and update text content to 'Winner!'.
+    document.querySelector(`#name-${activePlayer}`).textContent = 'Winner!';
   }
 });
