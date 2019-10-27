@@ -76,5 +76,9 @@ holdButtonEl.addEventListener('click',function() {
     document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner');
     // Reset roundScore variable to value of 0.
     roundScore = 0;
+    // Reset both player's current score UI element textContent values to 0 (value of roundScore).
+    for(let current of currentScores) {
+      current.textContent = roundScore  // value will be 0.
+    }
   }
 });
