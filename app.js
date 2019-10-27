@@ -65,7 +65,9 @@ holdButtonEl.addEventListener('click',function() {
   scores[activePlayer] += roundScore;
   // 2. Update textContent value of active player's score panel.
   document.querySelector(`#score-${activePlayer}`).textContent = scores[activePlayer];
-  // 3. Check whether active player's score is >= winningScore.
+  // 3. Reset roundScore variable to value of 0.
+  roundScore = 0;
+  // 4. Check whether active player's score is >= winningScore.
   if(scores[activePlayer] >= winningScore) {
     console.log('You won!');
     // Select active player's 'playername' DOM element node and update text content to 'Winner!'.
@@ -74,8 +76,6 @@ holdButtonEl.addEventListener('click',function() {
     document.querySelector(`.player-${activePlayer}-panel`).classList.remove('active');
     // Add 'winner' class to active player's panel DOM element node.
     document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner');
-    // Reset roundScore variable to value of 0.
-    roundScore = 0;
     // Reset both player's current score UI element textContent values to 0 (value of roundScore).
     for(let current of currentScores) {
       current.textContent = roundScore  // value will be 0.
