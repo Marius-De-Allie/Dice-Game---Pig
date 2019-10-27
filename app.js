@@ -72,5 +72,8 @@ holdButtonEl.addEventListener('click',function() {
     document.querySelector(`#name-${activePlayer}`).textContent = 'Winner!';
     //  Remove active class from currently active player's panel (winner).
     document.querySelector(`.player-${activePlayer}-panel`).classList.remove('active');
+    // Add 'winner' class to active player's panel DOM element node.
+    document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner');
+
   }
 });
