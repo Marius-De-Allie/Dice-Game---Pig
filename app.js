@@ -9,7 +9,7 @@ GAME RULES:
 
 */
 
-// Global Variables
+/*** GLOBAL VARIABLES ***/
 // Array to hold both player's scores during game.
 let scores = [0, 0];
 // Variable to hold currently active player's current score for the current round.
@@ -20,6 +20,8 @@ let activePlayer = 0;
 let winningScore = 100;
 // Variable to hold the value of random number between 1 and 6 (simulating  a dice roll).
 let diceRoll;
+// State variable to hold the boolean value for whether game is currently playing or if game has been won and has ended. Assigned value of true.
+let gamePlaying = true;
 
 // Select dice roll button element node from DOM and save to variable.
 const diceRollEl = document.querySelector('.btn-roll');
