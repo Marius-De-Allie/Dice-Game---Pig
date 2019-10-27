@@ -81,4 +81,7 @@ holdButtonEl.addEventListener('click',function() {
       current.textContent = roundScore  // value will be 0.
     }
   }
+  else {
+    console.log('You did not win, other player\'s turn.');
+  }
 });
