@@ -74,6 +74,7 @@ holdButtonEl.addEventListener('click',function() {
     document.querySelector(`.player-${activePlayer}-panel`).classList.remove('active');
     // Add 'winner' class to active player's panel DOM element node.
     document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner');
-
+    // Reset roundScore variable to value of 0.
+    roundScore = 0;
   }
 });
