@@ -67,7 +67,11 @@ holdButtonEl.addEventListener('click',function() {
   document.querySelector(`#score-${activePlayer}`).textContent = scores[activePlayer];
   // 3. Reset roundScore variable to value of 0.
   roundScore = 0;
-  // 4. Check whether active player's score is >= winningScore.
+  // 4. Reset both player's current score UI element textContent values to 0 (value of roundScore).
+  for(let current of currentScores) {
+    current.textContent = roundScore  // value will be 0.
+  }
+  // 5. Check whether active player's score is >= winningScore.
   if(scores[activePlayer] >= winningScore) {
     console.log('You won!');
     // Select active player's 'playername' DOM element node and update text content to 'Winner!'.
@@ -76,10 +80,6 @@ holdButtonEl.addEventListener('click',function() {
     document.querySelector(`.player-${activePlayer}-panel`).classList.remove('active');
     // Add 'winner' class to active player's panel DOM element node.
     document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner');
-    // Reset both player's current score UI element textContent values to 0 (value of roundScore).
-    for(let current of currentScores) {
-      current.textContent = roundScore  // value will be 0.
-    }
   }
   else {
     console.log('You did not win, other player\'s turn.');
