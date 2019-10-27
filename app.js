@@ -83,5 +83,7 @@ holdButtonEl.addEventListener('click',function() {
   }
   else {
     console.log('You did not win, other player\'s turn.');
+    // Update actievPlayer variable to other player (if 0 set to 1, if 1 set to 0).
+    activePlayer === 0? activePlayer = 1: activePlayer = 0;
   }
 });
