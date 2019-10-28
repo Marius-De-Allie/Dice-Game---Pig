@@ -59,6 +59,9 @@ function gameInit() {
   // Remove 'winner' class from both player panels DOM element nodes.
   document.querySelector('player-0-panel').classList.remove('winner'); // Player 1
   document.querySelector('player-1-panel').classList.remove('winner'); // Player 2
+  // Set player's name DOM element nodes textContent vlaue to 'Player 1' and 'Player 2' respectively.
+  document.querySelector('#name-0').textContent = 'Player 1'; // PLayer 1
+  document.querySelector('#name-1').textContent = 'Player 2'; // PLayer 1
 }
 
 
