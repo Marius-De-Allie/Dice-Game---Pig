@@ -55,13 +55,13 @@ function gameInit() {
 
   /* UI ELEMENTS */
   // Remove active class on both player panel DOM element nodes
-  document.querySelector('player-0-panel').classList.remove('active'); // Player 1
-  document.querySelector('player-1-panel').classList.remove('active'); // Player 2
+  document.querySelector('.player-0-panel').classList.remove('active'); // Player 1
+  document.querySelector('.player-1-panel').classList.remove('active'); // Player 2
   // Set active class on for player 1.
-  document.querySelector('player-0-panel').classList.add('active'); // Player 1 add active class.
+  document.querySelector('.player-0-panel').classList.add('active'); // Player 1 add active class.
   // Remove 'winner' class from both player panels DOM element nodes.
-  document.querySelector('player-0-panel').classList.remove('winner'); // Player 1
-  document.querySelector('player-1-panel').classList.remove('winner'); // Player 2
+  document.querySelector('.player-0-panel').classList.remove('winner'); // Player 1
+  document.querySelector('.player-1-panel').classList.remove('winner'); // Player 2
   // Set player's name DOM element nodes textContent vlaue to 'Player 1' and 'Player 2' respectively.
   document.querySelector('#name-0').textContent = 'Player 1'; // PLayer 1
   document.querySelector('#name-1').textContent = 'Player 2'; // PLayer 1
