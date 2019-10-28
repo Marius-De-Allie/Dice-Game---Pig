@@ -42,6 +42,8 @@ function gameInit() {
   scores = [0, 0];
   // Set roundScore to 0.
   roundScore = 0;
+  // Set activePLayer variable to value of 0.
+  actievPlayer = 0;
 }
 
 
