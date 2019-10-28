@@ -40,6 +40,8 @@ const player2ScoreEl = document.querySelector('#score-1');
 function gameInit() {
   // Set both player's game score to value of 0.
   scores = [0, 0];
+  // Set roundScore to 0.
+  roundScore = 0;
 }
 
 
