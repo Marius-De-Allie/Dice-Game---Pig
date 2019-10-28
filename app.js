@@ -84,6 +84,8 @@ holdButtonEl.addEventListener('click',function() {
       document.querySelector(`.player-${activePlayer}-panel`).classList.remove('active');
       // Add 'winner' class to active player's panel DOM element node.
       document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner');
+      // Update value of gamePlaying variable to false as game is now complete.
+      gamePlaying = false;
     }
     else { // If player score is not yet equal to winningScore.
       console.log('You did not win, other player\'s turn.');
