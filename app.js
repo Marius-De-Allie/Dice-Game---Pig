@@ -36,6 +36,12 @@ const currentScores = document.querySelectorAll('.player-current-score');
 const player1ScoreEl = document.querySelector('#score-0');
 const player2ScoreEl = document.querySelector('#score-1');
 
+/*** GAME INITIALIZATION FN ***/
+function gameInit() {
+
+}
+
+
 /*** DICE ROLL EL CLICK EVENT HANDLER ***/
 diceRollEl.addEventListener('click', function() {
   diceRoll = Math.floor(Math.random() * 6) + 1; // generate rand. # between 1 and 6.
