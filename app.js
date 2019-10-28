@@ -56,6 +56,9 @@ function gameInit() {
   document.querySelector('player-1-panel').classList.remove('active'); // Player 2
   // Set active class on for player 1.
   document.querySelector('player-0-panel').classList.add('active'); // Player 1 add active class.
+  // Remove 'winner' class from both player panels DOM element nodes.
+  document.querySelector('player-0-panel').classList.remove('winner'); // Player 1
+  document.querySelector('player-1-panel').classList.remove('winner'); // Player 2
 }
 
 
