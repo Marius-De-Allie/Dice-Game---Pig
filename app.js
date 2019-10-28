@@ -69,6 +69,10 @@ function gameInit() {
   for(let score of gameScores) {
     score.textContent = 0;
   }
+  // Loop through both players current score DOM element nodes textContent value and set each to roundScore (0).
+  for(currentScore of currentScores) {
+    currentScore.textContent = roundScore;
+  }
 }
 
 
