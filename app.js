@@ -65,34 +65,33 @@ diceRollEl.addEventListener('click', function() {
 holdButtonEl.addEventListener('click',function() {
   // Check if game is still active.
   if(gamePlaying) {
-    
-  }
-  // 1. Add current score to active player's global game score.
-  scores[activePlayer] += roundScore;
-  // 2. Update textContent value of active player's score panel.
-  document.querySelector(`#score-${activePlayer}`).textContent = scores[activePlayer];
-  // 3. Reset roundScore variable to value of 0.
-  roundScore = 0;
-  // 4. Reset both player's current score UI element textContent values to 0 (value of roundScore).
-  for(let current of currentScores) {
-    current.textContent = roundScore  // value will be 0.
-  }
-  // 5. Check whether active player's score is >= winningScore.
-  if(scores[activePlayer] >= winningScore) {
-    console.log('You won!');
-    // Select active player's 'playername' DOM element node and update text content to 'Winner!'.
-    document.querySelector(`#name-${activePlayer}`).textContent = 'Winner!';
-    //  Remove active class from currently active player's panel (winner).
-    document.querySelector(`.player-${activePlayer}-panel`).classList.remove('active');
-    // Add 'winner' class to active player's panel DOM element node.
-    document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner');
-  }
-  else {
-    console.log('You did not win, other player\'s turn.');
-    // Update actievPlayer variable to other player (if 0 set to 1, if 1 set to 0).
-    activePlayer === 0? activePlayer = 1: activePlayer = 0;
-    // Toggle active class on both player panel DOM element nodes to switch active player styling between players.
-    document.querySelector('.player-0-panel').classList.toggle('active'); // player 1.
-    document.querySelector('.player-1-panel').classList.toggle('active'); // player 2.
+    // 1. Add current score to active player's global game score.
+    scores[activePlayer] += roundScore;
+    // 2. Update textContent value of active player's score panel.
+    document.querySelector(`#score-${activePlayer}`).textContent = scores[activePlayer];
+    // 3. Reset roundScore variable to value of 0.
+    roundScore = 0;
+    // 4. Reset both player's current score UI element textContent values to 0 (value of roundScore).
+    for(let current of currentScores) {
+      current.textContent = roundScore  // value will be 0.
+    }
+    // 5. Check whether active player's score is >= winningScore.
+    if(scores[activePlayer] >= winningScore) {
+      console.log('You won!');
+      // Select active player's 'playername' DOM element node and update text content to 'Winner!'.
+      document.querySelector(`#name-${activePlayer}`).textContent = 'Winner!';
+      //  Remove active class from currently active player's panel (winner).
+      document.querySelector(`.player-${activePlayer}-panel`).classList.remove('active');
+      // Add 'winner' class to active player's panel DOM element node.
+      document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner');
+    }
+    else { // If player score is not yet equal to winningScore.
+      console.log('You did not win, other player\'s turn.');
+      // Update actievPlayer variable to other player (if 0 set to 1, if 1 set to 0).
+      activePlayer === 0? activePlayer = 1: activePlayer = 0;
+      // Toggle active class on both player panel DOM element nodes to switch active player styling between players.
+      document.querySelector('.player-0-panel').classList.toggle('active'); // player 1.
+      document.querySelector('.player-1-panel').classList.toggle('active'); // player 2.
+    }
   }
 });
