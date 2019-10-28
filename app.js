@@ -38,6 +38,7 @@ const player2ScoreEl = document.querySelector('#score-1');
 
 /*** GAME INITIALIZATION FN ***/
 function gameInit() {
+  /* RESET VARIABLE VALUES */
   // Set both player's game score to value of 0.
   scores = [0, 0];
   // Set roundScore to 0.
@@ -46,11 +47,15 @@ function gameInit() {
   actievPlayer = 0;
   // Set winningScore variable to default value of 100.
   winningScore = 100;
+  // Set gamePlaying state variable to value of true.
+  gamePlaying = true;
+
+  /* UI ELEMENTS */
   // Remove active class on both player panel DOM element nodes
   document.querySelector('player-0-panel').classList.remove('active'); // Player 1
   document.querySelector('player-1-panel').classList.remove('active'); // Player 2
-  // Set gamePlaying state variable to value of true.
-  gamePlaying = true;
+  // Set active class on for player 1.
+  document.querySelector('player-0-panel').classList.add('active'); // Player 1 add active class.
 }
 
 
