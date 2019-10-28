@@ -44,6 +44,8 @@ function gameInit() {
   roundScore = 0;
   // Set activePLayer variable to value of 0.
   actievPlayer = 0;
+  // Set winningScore variable to value of 0.
+  winningScore = 0;
   // Remove active class on both player panel DOM element nodes
   document.querySelector('player-0-panel').classList.remove('active'); // Player 1
   document.querySelector('player-1-panel').classList.remove('active'); // Player 2
