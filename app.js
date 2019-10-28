@@ -49,6 +49,8 @@ function gameInit() {
   // Remove active class on both player panel DOM element nodes
   document.querySelector('player-0-panel').classList.remove('active'); // Player 1
   document.querySelector('player-1-panel').classList.remove('active'); // Player 2
+  // Set gamePlaying state variable to value of true.
+  gamePlaying = true;
 }
 
 
