@@ -63,6 +63,10 @@ diceRollEl.addEventListener('click', function() {
 
 /*** HOLD BUTTON EL CLICK EVENT HANDLER ***/
 holdButtonEl.addEventListener('click',function() {
+  // Check if game is still active.
+  if(gamePlaying) {
+    
+  }
   // 1. Add current score to active player's global game score.
   scores[activePlayer] += roundScore;
   // 2. Update textContent value of active player's score panel.
