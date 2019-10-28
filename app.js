@@ -38,7 +38,8 @@ const player2ScoreEl = document.querySelector('#score-1');
 
 /*** GAME INITIALIZATION FN ***/
 function gameInit() {
-
+  // Set both player's game score to value of 0.
+  scores = [0, 0];
 }
 
 
