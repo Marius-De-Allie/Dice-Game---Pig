@@ -35,6 +35,9 @@ const diceEl = document.querySelector('.dice');
 const currentScores = document.querySelectorAll('.player-current-score');
 const player1ScoreEl = document.querySelector('#score-0');
 const player2ScoreEl = document.querySelector('#score-1');
+// Select both player's game score DOM element node and assign to variable.
+const gameScores = document.querySelectorAll('.player-score');
+
 
 /*** GAME INITIALIZATION FN ***/
 function gameInit() {
