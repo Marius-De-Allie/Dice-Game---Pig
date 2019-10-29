@@ -79,6 +79,8 @@ function gameInit() {
 // Call gameInit function to get game into playable state.
 gameInit();
 
+/*** NEW BUTTON EL CLICK EVENT HANDLER ***/
+newButtonEl.addEventListener('click', gameInit);
 /*** DICE ROLL EL CLICK EVENT HANDLER ***/
 diceRollEl.addEventListener('click', function() {
   diceRoll = Math.floor(Math.random() * 6) + 1; // generate rand. # between 1 and 6.
