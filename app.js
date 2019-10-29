@@ -84,29 +84,25 @@ newButtonEl.addEventListener('click', gameInit);
 /*** DICE ROLL EL CLICK EVENT HANDLER ***/
 diceRollEl.addEventListener('click', function() {
   if(gamePlaying) {
-
-  }
-  diceRoll = Math.floor(Math.random() * 6) + 1; // generate rand. # between 1 and 6.
-  diceEl.setAttribute('src', `dice-${diceRoll}.png`); // set src attribute on dice img element to image matching currently selected dice.
-  if(diceRoll !== 1) { // Check if dice roll value is not equal to 1.
-    roundScore += diceRoll; // Add current diceRoll value to the roundScore variable.
-    // Update active player current score DOM element node textContent value to current roundScore value.
-    document.querySelector(`#current-${activePlayer}`).textContent = roundScore;
-    console.log(`round score: ${roundScore}`);
-    console.log('value other than 1 rolled.');
-  }
-  else { // If current diceRoll value is = 1.
-    roundScore = 0;
-    for(let currentScore of currentScores) {
-      currentScore.textContent = roundScore;
+    diceRoll = Math.floor(Math.random() * 6) + 1; // generate rand. # between 1 and 6.
+    diceEl.setAttribute('src', `dice-${diceRoll}.png`); // set src attribute on dice img element to image matching currently selected dice.
+    if(diceRoll !== 1) { // Check if dice roll value is not equal to 1.
+      roundScore += diceRoll; // Add current diceRoll value to the roundScore variable.
+      // Update active player current score DOM element node textContent value to current roundScore value.
+      document.querySelector(`#current-${activePlayer}`).textContent = roundScore;
     }
-    // update activePlayer value (if 0 set to 1, if 1 set to 0).
-    activePlayer === 0? activePlayer = 1: activePlayer = 0;
-    // Toggle active class on both player's panel DOM element nodes.
-    document.querySelector('.player-0-panel').classList.toggle('active');
-    document.querySelector('.player-1-panel').classList.toggle('active');
+    else { // If current diceRoll value is = 1.
+      roundScore = 0;
+      for(let currentScore of currentScores) {
+        currentScore.textContent = roundScore;
+      }
+      // update activePlayer value (if 0 set to 1, if 1 set to 0).
+      activePlayer === 0? activePlayer = 1: activePlayer = 0;
+      // Toggle active class on both player's panel DOM element nodes.
+      document.querySelector('.player-0-panel').classList.toggle('active');
+      document.querySelector('.player-1-panel').classList.toggle('active');
+    }
   }
-  console.log('dice rolled!');
 });
 
 /*** HOLD BUTTON EL CLICK EVENT HANDLER ***/
