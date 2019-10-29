@@ -83,6 +83,9 @@ gameInit();
 newButtonEl.addEventListener('click', gameInit);
 /*** DICE ROLL EL CLICK EVENT HANDLER ***/
 diceRollEl.addEventListener('click', function() {
+  if(gamePlaying) {
+
+  }
   diceRoll = Math.floor(Math.random() * 6) + 1; // generate rand. # between 1 and 6.
   diceEl.setAttribute('src', `dice-${diceRoll}.png`); // set src attribute on dice img element to image matching currently selected dice.
   if(diceRoll !== 1) { // Check if dice roll value is not equal to 1.
